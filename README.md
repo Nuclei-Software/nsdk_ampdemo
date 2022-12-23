@@ -1,6 +1,21 @@
-# How to use
+# Nuclei SDK AMP Demos
+
+This repo mainly provide nuclei sdk amp demos works together with Nuclei Linux SDK.
+
+Three RTOSes(FreeRTOS/UCOSII/RT-Thread) demos are provided, the demos are just for
+reference, if you need communication with linux, other technology such as openAMP
+might be a good choice.
+
+## How to use
 
 We provide 3 examples for nuclei sdk amp examples used with linux sdk.
+Baremetal and Linux use same uart, so in baremetal case, we limited uart
+usage, print message not so frequently. If baremetal can use different
+uart to print message, then there will be no limitation of uart usage.
+
+* **ftamp**: freertos amp demo
+* **rtamp**: rt-thread nano amp demo
+* **ucamp**: ucos-ii amp demo.
 
 1. Clone Nuclei SDK
 
@@ -15,6 +30,7 @@ export NUCLEI_SDK_ROOT=$(pwd)
 
 ~~~shell
 # follow https://github.com/Nuclei-Software/nuclei-linux-sdk#clone-repo to clone repo
+# clone repo is required, please make sure it is done
 export NUCLEI_LINUXSDK_ROOT=/path/to/linuxsdk
 ~~~
 
